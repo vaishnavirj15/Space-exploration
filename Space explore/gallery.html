@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style1.css">
+        <title>Gallery</title>
+    </head>
+    <body>
+        <div class="full-img" id="fullImgBox">
+            <img src="space images/first.jpg" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+        </div>
+        <div class="gallery">
+            <img src="space images/first.jpg" onclick="openFullImg(this.src)">
+            <img src="space images/second.jpg" onclick="openFullImg(this.src)">
+            <img src="space images/third.jpg" onclick="openFullImg(this.src)">
+            <img src="space images/fourth.jpg" onclick="openFullImg(this.src)">
+            <img src="space images/jupiter.jpg" onclick="openFullImg(this.src)">
+            <img src="space images/shuttle.webp" onclick="openFullImg(this.src)">
+            <img src="space images/europa.jpg" onclick="openFullImg(this.src)">
+            <img src="space images/black.webp" onclick="openFullImg(this.src)">
+        </div>
+        <script>
+            var fullImgBox=document.getElementById("fullImgBox");
+            var fullImg=document.getElementById("fullImg");
+            function openFullImg(pic){
+                fullImgBox.style.display="flex";
+                fullImg.src=pic
+            }
+            function closeFullImg(){
+                fullImgBox.style.display="none";
+            }
+        </script>
+    </body>
+</html>
